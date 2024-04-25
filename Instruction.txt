@@ -1,0 +1,3 @@
+HTML
+1.For new tab use target attribute   <a target="_blank" href="https://www.google.com/">google</a>
+
