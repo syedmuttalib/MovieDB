@@ -73,9 +73,7 @@ $(document).ready(function () {
                     <p><strong>Production :</strong>${response.Production}</p>
                     <p><strong>BoxOffice :</strong>${response.BoxOffice}</p>
                     <p><strong>Ratings :</strong>${renderRatings(response.Ratings) }</p>
-                    <p><strong></strong>${website(response.Website) }</p>
-                    
-                                       
+                    <p><strong></strong>${website(response.Website) }</p>                 
                 </div>
             </div>
 
@@ -83,63 +81,11 @@ $(document).ready(function () {
     </div>
 </div>
 </div>`
-//improvise        
-//         `<div class="card">
-// <div class="card-header">
-//     <h1 class="card-title text-center">${response.Title}</h1>
-// </div>
-// <div class="card-body">
-//     <div class="container text-center">
-//         <div class="row">
-//             <div class="col">
-//                 <img class="card-img-top sm img-fluid" src="${response.Poster}" alt="">
-//             </div>
-//             <div class="col">
-//                 <p><strong>Describtion:</strong>${response.Plot}</p>
-//                 <p><strong>Type:</strong>${response.Type}</p>
-//                 <p><strong>Language:</strong>${response.Language}</p>
-//                 <p><strong>Year:</strong>${response.Year}</p>
-//                 <p><strong>Release Date:</strong>${response.Released}</p>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-// </div>`
-
-        //better
-        //    `<div class="card w-65 mt-5 mb-3">
-        //    <div class="card-body text-center">
-        //    <h2 class="card-title">${response.Title}</h2>
-        //    <hr/>
-        //    <div class="container text-center">
-        //    <div class="row">
-        //      <div class="col">
-        //      <img class="card-img-top img-fluid" onError="this.src='images.png'" src="${response.Poster}" alt="">
-        //      </div>
-        //      <div class="col">
-        //      <p class="card-text text-left"><strong>Description:</strong>${response.Plot}</p>
-        //      <p class="card-text"><strong>Type:</strong> ${response.Type}</p>
-        //      <p class="card-text"><strong>Language: </strong>${response.Language}</p>
-        //      <p class="card-text"><strong>Year: </strong>${response.Year}</p>
-        //      <p class="card-text"><strong>Released Date:</strong> ${response.Released}</p>
-        //      <p class="card-text"><strong>Year:</strong> ${response.Year}</p>
-        //    </div>
-        //  </div>
-
-        //    </div>
-        //  </div>`
       );
       $('#loader').html("")
     }
   });
 });
-
-
-
-
-
-
-
 
 
 let renderRatings=(ratings)=>{
@@ -163,11 +109,11 @@ let website=(webCheck)=>{
     return `<p cla><Strong>Website Not Avaliable!</Strong></p>`
    }
 
-   let elems=[]
-   webCheck.forEach((elem)=>{
-      elems.push(`<span><strong>Website - </strong>${elem.Website }</span>`)
-   })
-   return elems
+  //  let elems=[]
+  //  webCheck.forEach((elem)=>{
+  //     elems.push(`<span><strong>Website - </strong>${elem.Website }</span>`)
+  //  })
+  //  return elems
 
 
 }
